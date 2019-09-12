@@ -12,6 +12,7 @@
   const snippetNode = document.getElementById('snippet')
   const snippetContainerNode = document.getElementById('snippet-container')
   const obturateur = document.getElementById('save')
+  const embed = document.getElementById('embed')
 
   snippetContainerNode.style.opacity = '1'
   const oldState = vscode.getState();
@@ -124,6 +125,7 @@
       snippetNode.innerHTML = innerHTML
     }
 
+    embed.value = snippetNode.innerHTML.toString()
     vscode.setState({ innerHTML })
   })
 
